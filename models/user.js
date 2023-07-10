@@ -9,20 +9,6 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  requestedDevices: [{
-    deviceId: {
-      type: String,
-      required: true
-    },
-    volt: {
-      type: Number,
-      required: true
-    },
-    numberOfDevices: {
-      type: Number,
-      required: true
-    }
-  }],
   dateOfJoining: {
     type: Date,
     default: Date.now
@@ -35,7 +21,11 @@ const userSchema = new Schema({
   },
   phoneNumber: {
     type: String
-  }
+  },
+  password: {
+    type: String,
+    required: true
+  },
 });
 
 const User = model('User', userSchema);
