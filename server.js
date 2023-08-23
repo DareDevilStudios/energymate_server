@@ -133,6 +133,10 @@ function startHourlyUnitCalculation() {
   setInterval(calculateUnitsAndTotal, 300000); // Run every hour (3600000 milliseconds)
 }
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 
 app.post("/signup", async (req, res) => {
   const { email, password, username } = req.body;
