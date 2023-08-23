@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "node server",
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel server.js -d build"
   },
   "author": "",
   "license": "ISC",
