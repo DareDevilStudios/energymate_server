@@ -133,7 +133,7 @@ function startHourlyUnitCalculation() {
   setInterval(calculateUnitsAndTotal, 300000); // Run every hour (3600000 milliseconds)
 }
 
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.send("Hello World");
 });
 
