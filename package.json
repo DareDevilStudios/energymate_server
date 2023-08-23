@@ -8,8 +8,8 @@
     "node": "14.x"
   },
   "scripts": {
-    "dev": "nodemon server",
-    "start": "nodemon server",
+    "dev": "node server",
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
