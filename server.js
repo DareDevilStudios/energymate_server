@@ -6,7 +6,10 @@ import Device from "./models/device.js";
 const app = express();
 app.use(bodyParser.json()); // Add this line to parse JSON data
 
-mongoose.connect('mongodb+srv://energymate005:energymate005@energymate.b6m5nd8.mongodb.net/energymate?retryWrites=true&w=majority', {
+// const MongoDB_URI = "mongodb+srv://energymate005:<password>@energymate.b6m5nd8.mongodb.net/?retryWrites=true&w=majority";
+const MongoDB_URI = "mongodb://energymate005:energymate005@ac-wsub5pq-shard-00-00.b6m5nd8.mongodb.net:27017,ac-wsub5pq-shard-00-01.b6m5nd8.mongodb.net:27017,ac-wsub5pq-shard-00-02.b6m5nd8.mongodb.net:27017/?ssl=true&replicaSet=atlas-y25vdo-shard-0&authSource=admin&retryWrites=true&w=majority";
+
+mongoose.connect(MongoDB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
