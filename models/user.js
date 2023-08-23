@@ -13,15 +13,6 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  address: {
-    type: String
-  },
-  profilePhotoSrc: {
-    type: String
-  },
-  phoneNumber: {
-    type: String
-  },
   password: {
     type: String,
     required: true

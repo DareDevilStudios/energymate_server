@@ -7,6 +7,9 @@ const deviceSchema = new mongoose.Schema({
   total_units:{
     type: Number
   },
+  total_bill: {
+    type: Number
+  },
   AllDevices: [{
     device_name: {
       type: String,
@@ -19,7 +22,7 @@ const deviceSchema = new mongoose.Schema({
     status: {
       type: String,
       required: true,
-      default: 'requested'
+      default: 'available'
     },
     isOn: {
       type: Boolean,
@@ -33,11 +36,19 @@ const deviceSchema = new mongoose.Schema({
       type: Date
     },
     bill: {
-      type: Number
+      type: Number,
+      default: 0
     },
     units: {
+      type: Number,
+      default: 0
+    },
+    today_unit: [{
       type: Number
-    }
+    }],
+    monthly_unit: [{
+      type: Number
+    }],
   }
   ]
 });
